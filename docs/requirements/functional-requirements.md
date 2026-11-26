@@ -122,5 +122,22 @@ All requirements must be traceable to:
 - API endpoints
 - Automated tests
 
+example:
+PAT-001: Register Patient
+    |
+    +-- Use Case: RegisterPatient
+    |
+    +-- Domain: Patient Aggregate
+    |
+    +-- API: POST /api/v1/patients
+    |
+    +-- Database: patients table
+    |
+    +-- Tests:
+         - Valid registration
+         - Missing required fields
+         - Invalid date of birth
+         - Duplicate patient detection
+
 Requirements must be validated before implementation.
 
