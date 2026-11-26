@@ -38,6 +38,10 @@ within the clinic domain.
 | [entities.md](entities.md) | Concepts with identity and the aggregate roots that own them |
 | [value-objects.md](value-objects.md) | Concepts defined by their values |
 | [domain-rules.md](domain-rules.md) | Business invariants and where they are enforced |
+| [aggregates.md](aggregates.md) | Aggregate boundaries and what belongs inside the appointment aggregate |
+| [aggregate-roots.md](aggregate-roots.md) | The root as the only entry point for changing aggregate state |
+| [domain-invariants.md](domain-invariants.md) | Appointment invariants, their owners, and their enforcement |
+| [appointment-lifecycle.md](appointment-lifecycle.md) | Appointment statuses and allowed state transitions |
 
 ## 4. Scope
 
@@ -70,5 +74,12 @@ Step 07 established the initial domain model in
 It identifies which concepts need identity, which are defined by their values,
 and which business rules belong inside the domain.
 
-These documents describe design intent. The next implementation step will
-translate the model into domain code with tests.
+Stage 1 refines this model in
+[aggregates.md](aggregates.md), [aggregate-roots.md](aggregate-roots.md),
+[domain-invariants.md](domain-invariants.md), and
+[appointment-lifecycle.md](appointment-lifecycle.md). These documents describe
+design intent; the next implementation step will translate the model into domain
+code with tests. The Stage 1 lifecycle introduces `CHECKED_IN` and requires it
+before completion, which conflicts with the earlier model in
+[domain-rules.md](domain-rules.md); see the reconciliation notes in the Stage 1
+documents.
