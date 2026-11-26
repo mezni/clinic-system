@@ -34,6 +34,10 @@ within the clinic domain.
 |---|---|
 | [glossary.md](glossary.md) | Business terminology, core concepts, and distinctions between similar terms |
 | [ubiquitous-language.md](ubiquitous-language.md) | Business statements, domain interpretations, and naming conventions for future code |
+| [domain-model.md](domain-model.md) | Bounded contexts, aggregates, relationships, and lifecycles |
+| [entities.md](entities.md) | Concepts with identity and the aggregate roots that own them |
+| [value-objects.md](value-objects.md) | Concepts defined by their values |
+| [domain-rules.md](domain-rules.md) | Business invariants and where they are enforced |
 
 ## 4. Scope
 
@@ -58,8 +62,13 @@ For example, an `Appointment` (a planned visit) and an `Encounter` (an actual
 clinical interaction) are separate concepts and must not be represented by the
 same entity.
 
-## 6. Next Step
+## 6. Domain Model
 
-Step 07 — Domain Model: Entities, Value Objects & Domain Rules. That step will
-identify which concepts need identity, which are defined by their values, and
-which business rules belong inside the domain.
+Step 07 established the initial domain model in
+[domain-model.md](domain-model.md), [entities.md](entities.md),
+[value-objects.md](value-objects.md), and [domain-rules.md](domain-rules.md).
+It identifies which concepts need identity, which are defined by their values,
+and which business rules belong inside the domain.
+
+These documents describe design intent. The next implementation step will
+translate the model into domain code with tests.
