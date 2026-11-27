@@ -42,6 +42,10 @@ within the clinic domain.
 | [aggregate-roots.md](aggregate-roots.md) | The root as the only entry point for changing aggregate state |
 | [domain-invariants.md](domain-invariants.md) | Appointment invariants, their owners, and their enforcement |
 | [appointment-lifecycle.md](appointment-lifecycle.md) | Appointment statuses and allowed state transitions |
+| [domain-services.md](domain-services.md) | Business logic that does not belong to one Entity or Value Object |
+| [application-services.md](application-services.md) | Use-case orchestration and its boundaries |
+| [domain-events.md](domain-events.md) | Business facts recorded by the domain and delivered to interested handlers |
+| [appointment-booking-workflow.md](appointment-booking-workflow.md) | The complete `BookAppointment` use case across all layers |
 
 ## 4. Scope
 
@@ -83,3 +87,8 @@ code with tests. The Stage 1 lifecycle introduces `CHECKED_IN` and requires it
 before completion, which conflicts with the earlier model in
 [domain-rules.md](domain-rules.md); see the reconciliation notes in the Stage 1
 documents.
+
+The orchestration documents add the `BookAppointment` workflow: a Domain Service
+checks availability, an Application Service coordinates the use case, and a
+Domain Event records the successful booking. They describe design intent only;
+no production code is implemented yet.
